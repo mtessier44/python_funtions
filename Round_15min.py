@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime
 
-df = pd.read_csv('Lane_2_NH4_prepared_joined_prepared.csv')
+df = pd.read_csv('Z2_N2O_2_prepared.csv')
 
 
 l = []
@@ -33,6 +33,6 @@ for t in df['Time']:
 
             l += [start + hour + ':00' + end]
 
-print(l)
+#print(l)
 df['Time'] = l
 df.to_csv('output.csv', index=False)
