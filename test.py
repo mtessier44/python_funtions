@@ -1,10 +1,7 @@
-import numpy as np
-import matplotlib.pyplot as plt
+import pandas as pd
+import joblib
 
-x=[1,2,3,4,5]
-y=[1,2,3,4,5]
-z=np.array([[1],[2],[3],[4],[5]])
-ax = plt.axes(projection='3d')
-ax.plot_surface(x, y, z,cmap='viridis')
+row_dic = {'DO': 0.2, 'NH4': 0.3, 'NO3': 0.7}
 
-plt.show()
+X = pd.DataFrame([row_dic], columns=row_dic.keys())
+print(X)
